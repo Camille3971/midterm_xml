@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT TEI (teiHeader, text)>
+<!ELEMENT teiHeader (fileDesc, encodingDesc)>
+<!ELEMENT fileDesc (titleStmt, publicationStmt, sourceDesc)>
+<!ELEMENT titleStmt (title, editor)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT editor (#PCDATA)>
+<!ELEMENT publicationStmt (publisher,date, availability)>
+<!ELEMENT publisher (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT availability (p)>
+<!ELEMENT  p (#PCDATA) >
+<!ELEMENT sourceDesc (biblStruct)>
+<!ELEMENT biblStruct (title, author, pubPlace, publisher, date, idno, language, availability, source)>
+<!ELEMENT author (#PCDATA) >
+<!ELEMENT pubPlace (#PCDATA)>
+<!ELEMENT idno (#PCDATA) >
+<!ELEMENT language (#PCDATA) >
+<!ELEMENT source (p) >
+<!ELEMENT encodingDesc (p) >
+
+
+<!ATTLIST TEI xmlns CDATA #REQUIRED>
+<!ATTLIST idno type CDATA #REQUIRED >
+<!ATTLIST language ident CDATA #REQUIRED >
+
+<!ELEMENT text (front, body)>
+<!ELEMENT front (head)>
+<!ELEMENT head (#PCDATA)>
+<!ELEMENT body (lg | sp | div)*>
+<!ELEMENT lg (l+)>
+<!ELEMENT l (#PCDATA | caesura |rhyme)*>
+<!ELEMENT caesura EMPTY>
+<!ELEMENT rhyme (#PCDATA)>
+<!ELEMENT sp (lg+)>
+<!ELEMENT div (lg+)>
+
+<!ATTLIST lg type CDATA #REQUIRED>
+<!ATTLIST div type CDATA #REQUIRED>
+<!ATTLIST l met CDATA #REQUIRED>
+<!ATTLIST lg n CDATA #REQUIRED>
+<!ATTLIST l n CDATA #REQUIRED>
+<!ATTLIST lg rhyme CDATA #REQUIRED>
+<!ATTLIST rhyme label CDATA #REQUIRED>
+<!ATTLIST sp who CDATA #REQUIRED>
+

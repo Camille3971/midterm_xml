@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!DOCTYPE TEI SYSTEM "modele.dtd">
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>
+               <!-- Ressource title -->
+            </title>
+           <editor>
+              <!-- Name of the editor -->
+           </editor>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <!-- Publisher name -->
+            </publisher>
+            <date>
+               <!-- Publication date -->
+            </date>
+            <availability>
+               <p>
+                  <!-- License name -->
+               </p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <title>
+                  <!-- Book title -->
+               </title>
+               <author>
+                  <!-- Author name -->
+               </author>
+               <pubPlace>
+                  <!-- Publication city name -->
+               </pubPlace>
+               <publisher>
+                  <!-- Publisher name -->
+               </publisher>
+               <date>
+                  <!-- Date of publication -->
+               </date>
+               <idno type="">
+                  <!-- ARK Identifier -->
+               </idno>
+               <language ident="">
+                  <!-- Language of the document -->
+               </language>
+               <availability>
+                  <p>
+                     <!-- License -->
+                  </p>
+               </availability>
+               <source>
+                  <p>
+                     <!-- Physical reference -->
+                  </p>
+               </source>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>
+            <!-- Brief explanation of the encoding -->
+         </p>
+      </encodingDesc>
+   </teiHeader>
+   
+   
+   <text>
+      <front>
+        <head>
+           <!-- Fable title -->
+        </head>
+      </front>
+      <body>
+         
+         <!-- The following <lg> encodes a basic stanza -->
+         <lg type="" n="" rhyme="">
+            <l met="" n="">
+               <!-- One verse with a caesura --> <caesura/> <!-- and a rhyme--> <rhyme label=""></rhyme>
+            </l>
+            <l met="" n="">
+               <!-- One verse without a caesura but with a rhyme --><rhyme label=""></rhyme>
+            </l>        
+         </lg>
+         
+         <!-- The following <sp> encodes a basic stanza when a character is talking -->
+         <sp who="">
+            <lg type="" n="" rhyme="">
+               <l met="" n="">
+                  <!-- One verse with a caesura --> <caesura/> <!-- and a rhyme --><rhyme label=""></rhyme>
+               </l>
+               <l met="" n="">
+                  <!-- One verse without a caesura but with a rhyme --> <rhyme label=""></rhyme>
+               </l>        
+            </lg>
+         </sp>
+         
+         <!-- The following <div> encodes a basic stanza that is also the moral of the fable -->
+         <div type="">
+            <lg type="" n="" rhyme="">
+               <l met="" n="">
+                  <!-- One verse without a caesura but with a rhyme --> <rhyme label=""></rhyme>
+               </l>
+               <l met="" n="">
+                  <!-- One verse without a caesura but with a rhyme --> <rhyme label=""></rhyme></l>
+            </lg>
+          </div>
+      </body>
+  </text>
+</TEI>
